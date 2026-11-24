@@ -3,9 +3,9 @@
  const $ = (s,root=document) => root.querySelector(s);
  const $$ = (s,root=document) => [...root.querySelectorAll(s)];
  const SERVICES = window.SITE_SERVICES || [];
- const REQUESTS_KEY = "dva_puti_requests_v1";
- const USERS_KEY = "dva_puti_demo_users_v1";
- const SESSION_KEY = "dva_puti_demo_session_v1";
+ const REQUESTS_KEY = "temnolese_requests_v1";
+ const USERS_KEY = "temnolese_demo_users_v1";
+ const SESSION_KEY = "temnolese_demo_session_v1";
  const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
  const readJSON = (key,fallback) => { try { return JSON.parse(localStorage.getItem(key) || "null") ?? fallback; } catch { return fallback; } };
  const getRequests = () => readJSON(REQUESTS_KEY,[]);
@@ -20,16 +20,15 @@
    const page = location.pathname.split("/").pop() || "index.html";
    const nav = [
      ["index.html","Главная","i-home","nav-home"],
-     ["alexandra.html","Темнолесье","i-forest","nav-forest"],
-     ["alla.html","Алла","i-matrix","nav-matrix"],
-     ["joint.html","Совместно","i-oracle","nav-oracle"],
+     ["alexandra.html","Услуги","i-forest","nav-forest"],
+     ["about.html","Александра","i-user","nav-user"],
      ["booking.html","Запись","i-booking","nav-booking"],
      ["account.html","Кабинет","i-user","nav-user"]
    ];
    const header = $("#siteHeader");
-   if(header) header.innerHTML = '<header class="header"><a class="brand" href="index.html"><span class="brand-mark">✧</span><span><b>ДВА ПУТИ</b><small>АЛЛА × АЛЕКСАНДРА</small></span></a><button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button><nav class="nav">'+nav.map(([url,label,icon,art])=>'<a href="'+url+'" class="nav-link '+(page===url?'active':'')+'"><span class="nav-art '+art+'"><svg aria-hidden="true"><use href="assets/icons.svg#'+icon+'"/></svg></span><span>'+label+'</span></a>').join("")+'</nav></header>';
+   if(header) header.innerHTML = '<header class="header"><a class="brand" href="index.html"><span class="brand-mark">✧</span><span><b>ТЕМНОЛЕСЬЕ</b><small>АВТОРСКОЕ ПРОСТРАНСТВО</small></span></a><button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button><nav class="nav">'+nav.map(([url,label,icon,art])=>'<a href="'+url+'" class="nav-link '+(page===url?'active':'')+'"><span class="nav-art '+art+'"><svg aria-hidden="true"><use href="assets/icons.svg#'+icon+'"/></svg></span><span>'+label+'</span></a>').join("")+'</nav></header>';
    const footer = $("#siteFooter");
-   if(footer) footer.innerHTML = '<footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">✧</span><span><b>ДВА ПУТИ</b><small>АЛЛА × АЛЕКСАНДРА</small></span></a><p>Авторское пространство · 2026</p><div class="footer-links"><a href="https://vk.ru/soulmatetarot" target="_blank" rel="noopener">VK Аллы ↗</a><a href="https://t.me/witchwood" target="_blank" rel="noopener">Telegram Александры ↗</a><a href="account.html">Личный кабинет ↗</a></div></footer>';
+   if(footer) footer.innerHTML = '<footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">✧</span><span><b>ТЕМНОЛЕСЬЕ</b><small>АВТОРСКОЕ ПРОСТРАНСТВО</small></span></a><p>Александра · Темнолесье</p><div class="footer-links"><a href="https://t.me/witchwood" target="_blank" rel="noopener">Telegram ↗</a><a href="booking.html">Оставить заявку ↗</a><a href="account.html">Личный кабинет ↗</a></div></footer>';
    const menu=$("#siteHeader .menu-toggle"), menuNav=$("#siteHeader .nav");
    if(menu&&menuNav){
      menu.addEventListener("click",()=>{
@@ -115,7 +114,7 @@
      if(date&&date.value&&date.value<localDate()){showStep(2);date.setCustomValidity("Выберите сегодняшнюю или будущую дату.");date.reportValidity();return;}
      const owner=session();
      const request={
-       id:"DP-"+Date.now().toString(36).toUpperCase(),
+       id:"TM-"+Date.now().toString(36).toUpperCase(),
        serviceId:service.id,service:service.title,author:service.author,price:service.price,
        date:date?.value||"",time:$("#bookingTime").value,zone:$("#bookingZone").value.trim(),
        name:$("#bookingName").value.trim(),contact:$("#bookingContact").value.trim(),
@@ -125,7 +124,7 @@
      const rows=getRequests();rows.push(request);saveRequests(rows);
      form.hidden=true;
      $("#bookingSuccess").hidden=false;
-     $("#bookingSuccessText").textContent="Заявка № "+request.id+" сохранена в этом браузере. "+(owner?"Она появится в истории вашего личного кабинета.":"После регистрации или входа вы сможете увидеть её в кабинете, если укажете тот же логин, что и имя в заявке.");
+     $("#bookingSuccessText").textContent="Заявка № "+request.id+" сохранена в этом браузере. "+(owner?"Она появится в истории вашего личного кабинета.":"После регистрации или входа в этом браузере вы сможете найти заявку, оформив её под тем же именем, что и ваш логин.");
      $("#bookingSuccess").scrollIntoView({behavior:"smooth",block:"center"});
    });
  }
