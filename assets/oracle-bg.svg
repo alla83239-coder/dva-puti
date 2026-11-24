@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000"><defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#071710"/><stop offset=".52" stop-color="#183b2d"/><stop offset="1" stop-color="#0a1b14"/></linearGradient><radialGradient id="g"><stop stop-color="#c7a660" stop-opacity=".3"/><stop offset="1" stop-color="#c7a660" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="1000" fill="url(#b)"/><ellipse cx="850" cy="570" rx="700" ry="530" fill="url(#g)"/><g transform="translate(500 210) rotate(-9 130 210)" opacity=".35"><rect width="260" height="420" rx="20" fill="#06120d" stroke="#d0b270" stroke-width="3"/><rect x="18" y="18" width="224" height="384" rx="12" fill="none" stroke="#d0b270"/><circle cx="130" cy="190" r="72" fill="none" stroke="#d0b270" stroke-width="2"/><path d="M130 75v230M15 190h230M45 105l170 170M215 105L45 275" stroke="#d0b270" opacity=".6"/></g><g transform="translate(840 260) rotate(8 130 210)" opacity=".33"><rect width="260" height="420" rx="20" fill="#06120d" stroke="#d0b270" stroke-width="3"/><rect x="18" y="18" width="224" height="384" rx="12" fill="none" stroke="#d0b270"/><path d="M130 72c-90 70-90 160 0 240 90-80 90-170 0-240z" fill="none" stroke="#d0b270" stroke-width="2"/><circle cx="130" cy="190" r="40" fill="none" stroke="#d0b270"/></g><g fill="#d6bb7a"><circle cx="280" cy="190" r="3"/><circle cx="1270" cy="170" r="4"/><circle cx="1370" cy="600" r="2"/><circle cx="380" cy="760" r="3"/><circle cx="1090" cy="810" r="2"/></g><g fill="none" stroke="#c9aa68" opacity=".25"><circle cx="800" cy="520" r="405"/><circle cx="800" cy="520" r="460"/><path d="M800 50v940M330 520h940"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="o" x2="0" y2="1"><stop stop-color="#081a12"/><stop offset=".55" stop-color="#183a2a"/><stop offset="1" stop-color="#06140e"/></linearGradient>
+ <radialGradient id="moon"><stop stop-color="#f1d99d" stop-opacity=".52"/><stop offset="1" stop-color="#d5ad5c" stop-opacity="0"/></radialGradient>
+ <linearGradient id="card" x2="1" y2="1"><stop stop-color="#d7c18a"/><stop offset=".5" stop-color="#99743d"/><stop offset="1" stop-color="#45351f"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#o)"/>
+<ellipse cx="820" cy="420" rx="670" ry="520" fill="url(#moon)"/>
+<circle cx="1130" cy="190" r="115" fill="#e4c984" opacity=".32"/><circle cx="1174" cy="154" r="107" fill="#0d291d"/>
+<g opacity=".35" fill="#0a2117"><path d="M0 0h190l-45 500 85 500H0zM1600 0h-190l45 500-85 500h230z"/><path d="M190 0q190 200 80 450T350 1000h90q-110-410 0-590T280 0zM1410 0q-190 200-80 450t-80 550h-90q110-410 0-590t160-410z"/></g>
+<path d="M0 820Q400 730 800 810t800 0v190H0Z" fill="#06130c" opacity=".62"/>
+<!-- tarot cards -->
+<g transform="translate(500 260) rotate(-12 140 235)" filter="url(#shadow)" opacity=".4"><rect x="12" y="18" width="280" height="450" rx="21" fill="#000"/></g>
+<g transform="translate(500 260) rotate(-12 140 235)">
+ <rect width="280" height="450" rx="18" fill="#0a1a12" stroke="#d5b56d" stroke-width="5"/>
+ <rect x="17" y="17" width="246" height="416" rx="11" fill="url(#card)" stroke="#f0d797" stroke-width="2"/>
+ <circle cx="140" cy="190" r="75" fill="none" stroke="#49381e" stroke-width="4"/>
+ <circle cx="140" cy="190" r="55" fill="none" stroke="#49381e" stroke-width="2"/>
+ <path d="M140 102v178M52 190h176M78 128l124 124M202 128 78 252" stroke="#49381e" stroke-width="3"/>
+ <path d="M140 138 156 174 194 190 156 206 140 242 124 206 86 190 124 174Z" fill="#49381e"/>
+ <path d="M47 354h186" stroke="#49381e" stroke-width="3"/>
+</g>
+<g transform="translate(805 225) rotate(2 140 235)">
+ <rect width="280" height="450" rx="18" fill="#0a1a12" stroke="#d5b56d" stroke-width="5"/>
+ <rect x="17" y="17" width="246" height="416" rx="11" fill="url(#card)" stroke="#f0d797" stroke-width="2"/>
+ <path d="M140 80c-106 67-106 180 0 290 106-110 106-223 0-290Z" fill="none" stroke="#49381e" stroke-width="4"/>
+ <circle cx="140" cy="205" r="58" fill="none" stroke="#49381e" stroke-width="4"/>
+ <path d="M140 120v170M55 205h170M83 148l114 114M197 148 83 262" stroke="#49381e" stroke-width="3"/>
+ <path d="M47 354h186" stroke="#49381e" stroke-width="3"/>
+</g>
+<g transform="translate(1108 275) rotate(13 140 235)" opacity=".82">
+ <rect width="280" height="450" rx="18" fill="#0a1a12" stroke="#d5b56d" stroke-width="5"/>
+ <rect x="17" y="17" width="246" height="416" rx="11" fill="url(#card)" stroke="#f0d797" stroke-width="2"/>
+ <path d="M140 100q-85 76 0 214 85-138 0-214Z" fill="none" stroke="#49381e" stroke-width="4"/>
+ <circle cx="140" cy="206" r="40" fill="none" stroke="#49381e" stroke-width="3"/>
+ <path d="M140 141v130M75 206h130" stroke="#49381e" stroke-width="3"/>
+ <path d="M47 354h186" stroke="#49381e" stroke-width="3"/>
+</g>
+<!-- candle and scattered sparks -->
+<g><rect x="240" y="640" width="42" height="154" rx="7" fill="#d6c49a"/><path d="M261 634q-32-55 0-82 34 35 0 82" fill="#e9b65d"/><path d="M261 624q-17-32 0-49 18 25 0 49" fill="#fff1bc"/></g>
+<g fill="#edce8e"><circle cx="345" cy="280" r="3"/><circle cx="407" cy="515" r="2"/><circle cx="1220" cy="690" r="3"/><circle cx="1375" cy="525" r="2"/><circle cx="850" cy="740" r="3"/></g>
+<g fill="none" stroke="#d1ae65" opacity=".27"><path d="M90 840Q800 700 1510 840"/><circle cx="800" cy="500" r="400"/><circle cx="800" cy="500" r="440"/></g>
+</svg>
