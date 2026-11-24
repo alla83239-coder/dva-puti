@@ -526,3 +526,31 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--gold-light)}
   .portrait-label small{font-size:6px}
   .intro-strip{padding:38px 18px}
 }
+
+
+/* Portrait fallback: keep both authors' real photographs clear and color-coherent. */
+.portrait-card-alexandra{
+  background:#0b241a !important;
+  border-color:rgba(222,193,127,.62) !important;
+  padding:0 !important;
+}
+.portrait-card-alexandra img{
+  filter:saturate(.82) sepia(.07) contrast(1.03) brightness(.94) !important;
+  mix-blend-mode:normal !important;
+  object-position:center 32%;
+}
+.profile-photo-alexandra{
+  background:linear-gradient(145deg,#d9bd78,#6e532d,#d9bd78) !important;
+  padding:8px !important;
+}
+.profile-photo-alexandra img{
+  filter:saturate(.86) sepia(.06) contrast(1.04) brightness(.96) !important;
+  mix-blend-mode:normal !important;
+}
+.author-feature-forest .author-photo{
+  background:#0b241a !important;
+}
+.author-feature-forest .author-photo img{
+  filter:saturate(.82) sepia(.07) contrast(1.03) brightness(.94) !important;
+  mix-blend-mode:normal !important;
+}
