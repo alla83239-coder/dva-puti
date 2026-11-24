@@ -13,8 +13,7 @@
 ## Дизайн и материалы
 - Montserrat, изумрудно-золотая палитра, градиенты и объёмные кнопки.
 - `assets/forest-bg.svg`, `assets/oracle-bg.svg`, `assets/matrix-bg.svg` — иллюстрированные фоновые сцены.
-- `assets/alexandra-pencil.webp` — карандашная обработка фотографии Александры.
-- `assets/alexandra-portrait.webp` — исходный портрет.
+- `assets/alexandra-portrait.webp` — исходный портрет Александры с мягкой цветокоррекцией.
 - `assets/alla-portrait.webp` — портрет Аллы.
 - `assets/icons.svg` — SVG-иконки навигации.
 
