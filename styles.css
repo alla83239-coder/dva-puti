@@ -277,3 +277,113 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--gold-light)}
 .portrait-card-alexandra{background:linear-gradient(145deg,#f3e9d2,#c7ae78);}
 .profile-photo-alexandra{background:linear-gradient(145deg,#f3e9d2,#c7ae78,#e8d4a2);}
 .author-feature-forest .author-photo{background:#eee3ca;}
+
+/* --- Visual refinement: quieter editorial forest / matched portrait cards --- */
+.bg-forest{
+  background-image:
+    linear-gradient(90deg,rgba(3,15,10,.86) 0%,rgba(5,25,17,.76) 58%,rgba(5,25,17,.70) 100%),
+    url("assets/forest-bg.svg");
+  background-size:cover;
+  background-position:center;
+}
+.hero{
+  min-height:585px;
+  grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr);
+  gap:clamp(24px,3.2vw,56px);
+  padding:64px clamp(30px,5.2vw,92px) 68px;
+}
+.hero-copy{max-width:760px}
+.hero h1{
+  font-size:clamp(48px,3.7vw,66px);
+  line-height:1.08;
+  letter-spacing:-.055em;
+  margin:0 0 20px;
+}
+.hero h1 em{white-space:nowrap}
+.hero .lead{max-width:630px;font-size:12px;line-height:1.9}
+.hero-actions{margin-top:26px}
+.hero-note{margin-top:30px}
+.hero-portraits{
+  min-height:380px;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+}
+.portrait-card{
+  width:min(43%,260px);
+  height:340px;
+  border-radius:22px;
+  border:1px solid rgba(222,193,127,.58);
+  background:#0b241a;
+  box-shadow:0 15px 36px rgba(0,0,0,.38),inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.portrait-card:first-child,.portrait-card:last-of-type{transform:none}
+.portrait-card-alexandra{
+  padding:0;
+  background:#0b241a;
+  border-color:rgba(222,193,127,.58);
+  box-shadow:0 15px 36px rgba(0,0,0,.38),inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.portrait-card img,
+.portrait-card-alexandra img{
+  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  filter:saturate(.72) sepia(.09) contrast(1.04) brightness(.94);
+  mix-blend-mode:normal;
+}
+.portrait-card:after{
+  inset:48% 0 0;
+  background:linear-gradient(180deg,rgba(3,13,8,0),rgba(3,13,8,.88));
+}
+.portrait-label{left:20px;right:14px;bottom:19px}
+.portrait-label small{font-size:7px;letter-spacing:.17em}
+.portrait-label b{font-size:21px}
+.hero-shade{
+  background:
+    radial-gradient(ellipse at 76% 38%,rgba(189,157,81,.10),transparent 34%),
+    linear-gradient(90deg,rgba(3,14,9,.25),transparent 70%);
+}
+.intro-strip{
+  padding:54px 22px 56px;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at 50% 0,rgba(194,158,83,.11),transparent 62%),
+    linear-gradient(180deg,#0b241a,#081b13);
+  color:var(--cream);
+  border-top:1px solid rgba(214,184,111,.2);
+  border-bottom:1px solid rgba(214,184,111,.18);
+}
+.intro-strip .eyebrow{color:var(--gold-light)}
+.intro-strip h2{font-size:clamp(26px,3.1vw,39px);margin-bottom:12px}
+.intro-strip h2 em{color:var(--gold-light)}
+.intro-strip p:last-child{color:#b9c7ba}
+.author-feature-forest .author-photo img{
+  filter:saturate(.76) sepia(.10) contrast(1.04);
+  mix-blend-mode:normal;
+}
+.author-feature-forest .author-photo{background:#0b241a}
+.author-photo:after{inset:35% 0 0;background:linear-gradient(transparent,rgba(4,16,10,.46))}
+@media(max-width:1100px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(370px,.9fr);padding-inline:34px;gap:22px}
+  .hero h1{font-size:clamp(46px,4.4vw,58px)}
+  .portrait-card{height:315px}
+  .hero-portraits{gap:13px}
+}
+@media(max-width:850px){
+  .hero{grid-template-columns:1fr;min-height:0;padding:54px 25px 58px}
+  .hero h1{font-size:clamp(43px,8vw,58px)}
+  .hero h1 em{white-space:normal}
+  .hero-portraits{min-height:0;padding:22px 0 4px}
+  .portrait-card{width:min(42%,250px);height:315px}
+  .intro-strip{padding:43px 20px}
+}
+@media(max-width:600px){
+  .hero{padding:44px 20px 50px}
+  .hero h1{font-size:clamp(38px,10vw,48px)}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .button{width:100%}
+  .hero-portraits{gap:10px}
+  .portrait-card{width:calc(50% - 5px);height:265px;border-radius:17px}
+  .portrait-label{left:12px;bottom:13px}
+  .portrait-label b{font-size:17px}
+  .portrait-label small{font-size:6px}
+}
