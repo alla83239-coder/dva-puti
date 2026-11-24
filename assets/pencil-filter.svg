@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<filter id="pencilSketch" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+  <feColorMatrix in="SourceGraphic" type="saturate" values="0" result="mono"/>
+  <feGaussianBlur in="mono" stdDeviation="1.8" result="soft"/>
+  <feColorMatrix in="soft" type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" result="inverse"/>
+  <feBlend in="mono" in2="inverse" mode="color-dodge" result="sketch"/>
+  <feComponentTransfer in="sketch" result="contrast">
+    <feFuncR type="gamma" amplitude="1.12" exponent="1.12" offset="-0.02"/>
+    <feFuncG type="gamma" amplitude="1.12" exponent="1.12" offset="-0.02"/>
+    <feFuncB type="gamma" amplitude="1.12" exponent="1.12" offset="-0.02"/>
+  </feComponentTransfer>
+  <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="2" seed="17" result="papergrain"/>
+  <feColorMatrix in="papergrain" type="saturate" values="0" result="grainmono"/>
+  <feComponentTransfer in="grainmono" result="grainsoft">
+    <feFuncA type="table" tableValues="0 .13"/>
+  </feComponentTransfer>
+  <feBlend in="contrast" in2="grainsoft" mode="multiply" result="penciled"/>
+  <feColorMatrix in="penciled" type="matrix" values="
+   .92 .05 .02 0 .025
+   .74 .20 .06 0 .015
+   .48 .12 .03 0 .000
+   0 0 0 1 0"/>
+</filter>
+</svg>
