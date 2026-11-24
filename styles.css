@@ -387,3 +387,142 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--gold-light)}
   .portrait-label b{font-size:17px}
   .portrait-label small{font-size:6px}
 }
+
+
+/* --- Final editorial composition: consistent portraits, quieter forest, tighter title --- */
+.bg-forest{
+  background-image:
+    linear-gradient(90deg,rgba(3,14,9,.90) 0%,rgba(5,25,17,.80) 58%,rgba(5,25,17,.72) 100%),
+    url("assets/forest-bg.svg") !important;
+  background-size:cover;
+  background-position:center;
+}
+.hero{
+  min-height:590px;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:clamp(18px,2.8vw,44px);
+  padding:58px clamp(28px,5.2vw,90px) 64px;
+}
+.hero-copy{max-width:760px;width:100%}
+.hero h1{
+  max-width:100%;
+  font-size:clamp(39px,4.2vw,66px);
+  line-height:1.06;
+  letter-spacing:-.052em;
+  margin:0 0 19px;
+}
+.hero h1 em{white-space:nowrap}
+.hero .lead{max-width:630px;font-size:11px;line-height:1.9}
+.hero-actions{margin-top:24px}
+.hero-note{margin-top:27px}
+.hero-portraits{
+  min-height:360px;
+  gap:15px;
+  align-items:center;
+  justify-content:center;
+}
+.portrait-card{
+  position:relative;
+  width:min(48%,230px);
+  height:335px;
+  border-radius:118px 118px 19px 19px;
+  border:1px solid rgba(222,193,127,.62);
+  padding:0;
+  overflow:hidden;
+  background:#0b241a;
+  box-shadow:0 16px 38px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.06);
+  transform:none !important;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.portrait-card:hover{
+  transform:translateY(-5px) !important;
+  box-shadow:0 22px 44px rgba(0,0,0,.48),0 0 22px rgba(197,164,94,.12);
+}
+.portrait-card img{
+  display:block;
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center 32%;
+  filter:saturate(.82) sepia(.07) contrast(1.03) brightness(.94);
+  mix-blend-mode:normal;
+}
+.portrait-card-alexandra{
+  background:#d9cba8;
+  border-color:rgba(231,210,153,.84);
+}
+.portrait-card-alexandra img{
+  object-position:center 27%;
+  filter:none !important;
+  mix-blend-mode:normal !important;
+}
+.portrait-card:after{
+  inset:49% 0 0;
+  background:linear-gradient(180deg,rgba(3,13,8,0),rgba(3,13,8,.88));
+}
+.portrait-label{left:17px;right:12px;bottom:17px}
+.portrait-label small{font-size:7px;letter-spacing:.16em}
+.portrait-label b{font-size:19px}
+.portrait-glow{width:90%;height:82%;top:8%;left:5%}
+.intro-strip{
+  padding:46px 22px 48px;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at 50% 0,rgba(194,158,83,.10),transparent 62%),
+    linear-gradient(180deg,#0b241a,#081b13);
+  color:var(--cream);
+  border-top:1px solid rgba(214,184,111,.2);
+  border-bottom:1px solid rgba(214,184,111,.18);
+}
+.intro-strip .eyebrow{color:var(--gold-light)}
+.intro-strip h2{font-size:clamp(25px,3vw,38px);margin-bottom:11px}
+.intro-strip h2 em{color:var(--gold-light)}
+.intro-strip p:last-child{color:#b9c7ba}
+.author-feature-forest .author-photo{background:#d9cba8}
+.author-feature-forest .author-photo img{
+  filter:none !important;
+  mix-blend-mode:normal !important;
+}
+.profile-photo-alexandra{
+  background:linear-gradient(145deg,#e9d8b0,#9a7c47,#dfc991);
+  padding:8px;
+}
+.profile-photo-alexandra img{
+  filter:none !important;
+  mix-blend-mode:normal !important;
+}
+@media(max-width:1100px){
+  .hero{
+    min-height:555px;
+    grid-template-columns:minmax(0,1fr) minmax(315px,.88fr);
+    gap:18px;
+    padding:50px 34px 58px;
+  }
+  .hero-copy{max-width:none}
+  .hero h1{font-size:clamp(37px,4.25vw,48px);line-height:1.08}
+  .hero-portraits{min-height:0;gap:11px}
+  .portrait-card{width:48%;height:292px;border-radius:105px 105px 17px 17px}
+  .portrait-label{left:12px;bottom:13px}
+  .portrait-label b{font-size:17px}
+}
+@media(max-width:850px){
+  .hero{
+    grid-template-columns:1fr;
+    min-height:0;
+    padding:52px 25px 57px;
+    gap:16px;
+  }
+  .hero h1{font-size:clamp(43px,7vw,58px)}
+  .hero h1 em{white-space:normal}
+  .hero-portraits{min-height:0;padding:18px 0 3px;gap:16px}
+  .portrait-card{width:min(42%,235px);height:315px}
+}
+@media(max-width:600px){
+  .hero{padding:43px 20px 48px}
+  .hero h1{font-size:clamp(38px,9.5vw,49px)}
+  .hero-portraits{gap:11px}
+  .portrait-card{width:calc(50% - 6px);height:270px;border-radius:17px}
+  .portrait-label{left:12px;bottom:13px}
+  .portrait-label b{font-size:16px}
+  .portrait-label small{font-size:6px}
+  .intro-strip{padding:38px 18px}
+}
