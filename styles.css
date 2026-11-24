@@ -554,3 +554,162 @@ h1 em,h2 em,h3 em{font-style:normal;color:var(--gold-light)}
   filter:saturate(.82) sepia(.07) contrast(1.03) brightness(.94) !important;
   mix-blend-mode:normal !important;
 }
+
+/* ==========================================================
+   TEMNOLESE — standalone Alexandra brand and photographic art
+   ========================================================== */
+:root{--forest:#061912;--forest-2:#0b241a;--emerald:#123d2d;--emerald-2:#1a513b;--gold:#c5a45e;--gold-light:#ead69b;--cream:#f2efdf}
+.bg-forest,.services-hero,.booking-hero,.account-hero{
+ background-image:linear-gradient(90deg,rgba(2,15,10,.84),rgba(5,24,17,.64)),url("https://images.unsplash.com/photo-1762755126280-6d8a4f9d1115?auto=format&fit=crop&w=1800&q=82") !important;
+ background-position:center;background-size:cover;
+}
+.bg-oracle,.bg-matrix{
+ background-image:linear-gradient(90deg,rgba(2,15,10,.76),rgba(5,24,17,.48)),url("https://images.unsplash.com/photo-1694144167581-8bc49479f6b7?auto=format&fit=crop&w=1600&q=80") !important;
+ background-position:center;background-size:cover;
+}
+.nav-home,.nav-forest,.nav-matrix,.nav-oracle,.nav-booking,.nav-user{
+ background-position:center;background-size:cover;
+}
+.nav-home,.nav-forest,.nav-user{background-image:linear-gradient(#06191299,#06191299),url("https://images.unsplash.com/photo-1762755126280-6d8a4f9d1115?auto=format&fit=crop&w=220&q=65")}
+.nav-oracle,.nav-booking{background-image:linear-gradient(#06191299,#06191299),url("https://images.unsplash.com/photo-1694144167581-8bc49479f6b7?auto=format&fit=crop&w=220&q=65")}
+.nav-matrix{background-image:linear-gradient(#06191299,#06191299),url("https://images.unsplash.com/photo-1668086682339-f14262879c18?auto=format&fit=crop&w=220&q=65")}
+.hero-temnolese{
+ min-height:650px;
+ display:grid;
+ grid-template-columns:minmax(0,1.12fr) minmax(310px,.72fr);
+ align-items:center;
+ gap:clamp(24px,5vw,78px);
+ padding:64px clamp(26px,7.2vw,112px) 70px;
+ position:relative;
+ isolation:isolate;
+ background-image:url("https://images.unsplash.com/photo-1762755126280-6d8a4f9d1115?auto=format&fit=crop&w=2000&q=85");
+ background-size:cover;background-position:center 53%;
+}
+.hero-temnolese-shade{
+ position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(90deg,rgba(2,13,8,.90) 0%,rgba(3,20,13,.78) 48%,rgba(3,18,12,.46) 100%),
+ radial-gradient(ellipse at 78% 40%,rgba(207,169,91,.17),transparent 50%);
+}
+.hero-temnolese .hero-copy{max-width:720px}
+.hero-temnolese h1{
+ font-size:clamp(52px,7.2vw,94px);line-height:.99;letter-spacing:-.065em;
+ margin:0 0 22px;color:#f3f0df;
+}
+.hero-temnolese h1::first-letter{color:#fff}
+.hero-temnolese .lead{max-width:620px;font-size:12px;line-height:2;color:#e2e6d9}
+.hero-temnolese .eyebrow{font-size:9px;letter-spacing:.2em;margin-bottom:20px}
+.hero-temnolese .hero-actions{margin-top:28px}
+.hero-temnolese .hero-note{margin-top:32px}
+.hero-portrait-large{
+ width:min(100%,330px);height:430px;justify-self:center;align-self:center;
+ position:relative;display:block;overflow:hidden;
+ border:1px solid rgba(229,203,140,.85);border-radius:170px 170px 24px 24px;
+ background:#0b241a;box-shadow:0 24px 65px rgba(0,0,0,.48),0 0 38px rgba(205,171,96,.12);
+ transition:transform .28s,box-shadow .28s;
+}
+.hero-portrait-large:hover{transform:translateY(-6px);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 46px rgba(205,171,96,.2)}
+.hero-portrait-large img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:none!important;mix-blend-mode:normal!important}
+.hero-portrait-large:after{content:"";position:absolute;inset:58% 0 0;background:linear-gradient(transparent,rgba(1,12,8,.94))}
+.hero-portrait-caption{position:absolute;left:22px;right:18px;bottom:21px;z-index:2}
+.hero-portrait-caption small{display:block;color:var(--gold-light);font-size:7px;letter-spacing:.19em;margin-bottom:8px}
+.hero-portrait-caption b{font-size:23px;letter-spacing:-.02em}
+.hero-temnolese .hero-index{color:#e1d4a4}
+.intro-temnolese{
+ background:radial-gradient(ellipse at 50% 0,rgba(199,163,91,.13),transparent 65%),linear-gradient(180deg,#0b241a,#071810);
+ border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.temno-photo-grid{display:grid;grid-template-columns:1.18fr .82fr;grid-template-rows:245px 245px;gap:15px}
+.temno-photo-card{position:relative;display:block;overflow:hidden;border:1px solid var(--line);background:#081b12;box-shadow:0 14px 32px #0005;isolation:isolate}
+.temno-photo-card:first-child{grid-row:span 2}
+.temno-photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease;filter:saturate(.83) contrast(1.04)}
+.temno-photo-card:hover img{transform:scale(1.045)}
+.temno-photo-overlay{position:absolute;inset:25% 0 0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:24px;background:linear-gradient(180deg,transparent,rgba(2,12,7,.92))}
+.temno-photo-overlay small{font-size:8px;letter-spacing:.18em;color:var(--gold-light);font-weight:700;margin-bottom:10px}
+.temno-photo-overlay b{font-size:clamp(20px,2.6vw,30px);line-height:1.12}
+.temno-photo-overlay i{font-style:normal;font-size:9px;color:#d2dacd;margin-top:10px}
+.temno-feature-section{background:linear-gradient(145deg,#0c2b1d,#07170f);border-block:1px solid var(--line)}
+.temno-feature-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(24px,5vw,72px)}
+.temno-feature-photo{height:390px;border:1px solid var(--line);overflow:hidden;box-shadow:0 18px 40px #0006}
+.temno-feature-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.82)}
+.temno-feature-copy h2{font-size:clamp(31px,4.2vw,52px);line-height:1.1;margin:0 0 18px}
+.temno-feature-copy p:not(.eyebrow){font-size:11px;line-height:2;color:#cad5c8}
+.temno-feature-copy .button{margin-top:13px}
+.photo-credit{margin:30px 0 0!important;color:#8fa18f!important;font-size:7px!important;letter-spacing:.04em}
+.closing-temnolese{background:radial-gradient(ellipse at 50% 0,rgba(197,164,94,.15),transparent 60%),#081c12}
+.services-hero{
+ background-image:linear-gradient(90deg,rgba(2,13,8,.90),rgba(3,20,13,.62)),url("https://images.unsplash.com/photo-1762755126280-6d8a4f9d1115?auto=format&fit=crop&w=1800&q=82") !important;
+ min-height:390px;
+}
+.tarot-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.tarot-photo{min-height:390px;overflow:hidden;border:1px solid var(--line);box-shadow:0 13px 32px #0005}
+.tarot-photo img{width:100%;height:100%;min-height:390px;object-fit:cover;object-position:center}
+.tarot-price-card{padding:30px 32px}
+.tarot-price-card .button{margin-top:18px}
+.discount-wide{display:flex;align-items:center;gap:24px;margin-top:18px;padding:22px 28px;background:linear-gradient(145deg,#16432d,#092116);border:1px solid var(--line);box-shadow:0 12px 26px #0004}
+.discount-wide>div{flex:1}
+.discount-wide .eyebrow{margin:0 0 8px}
+.discount-wide h3{font-size:20px;margin:0 0 6px}
+.discount-wide p:not(.eyebrow){font-size:10px;line-height:1.8;color:#cad4c6;margin:0}
+.discount-wide strong{font-size:50px;line-height:1;color:var(--gold-light)}
+.service-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.service-tile{display:flex;flex-direction:column;padding:21px 22px;background:linear-gradient(145deg,#143b29,#091e14);border:1px solid var(--line);min-height:218px;box-shadow:0 9px 23px #0004}
+.service-tile small{font-size:7px;color:var(--gold-light);letter-spacing:.14em}
+.service-tile h3{font-size:19px;margin:14px 0 8px}
+.service-tile p{font-size:9px;line-height:1.85;color:#c2cec0;margin:0 0 15px}
+.service-tile span{font-size:8px;color:#99ad9b;margin-top:auto}
+.service-tile a{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);border-top:1px solid var(--line);padding-top:12px;margin-top:13px}
+.ritual-photo-banner{height:230px;position:relative;overflow:hidden;border:1px solid var(--line);margin:0 0 28px}
+.ritual-photo-banner img{width:100%;height:100%;object-fit:cover;object-position:center 52%;filter:saturate(.78)}
+.ritual-photo-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,12,7,.55),transparent 75%)}
+.ritual-photo-banner span{position:absolute;z-index:1;left:24px;bottom:20px;font-size:9px;font-weight:700;letter-spacing:.2em;color:var(--gold-light)}
+.ritual-card{display:flex;flex-direction:column}
+.ritual-card a{margin-top:14px;padding-top:11px;border-top:1px solid rgba(40,57,39,.16);font-size:8px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#8c6a31}
+.candle-layout-photo{grid-template-columns:.9fr 1.1fr;align-items:stretch}
+.candle-real-photo{min-height:350px;overflow:hidden;border:1px solid var(--line);box-shadow:0 12px 30px #0005}
+.candle-real-photo img{width:100%;height:100%;min-height:350px;object-fit:cover;object-position:center}
+.candle-info{padding:22px 28px;background:linear-gradient(145deg,#123925,#07190f);border:1px solid var(--line)}
+.candle-info .button{margin-top:18px}
+.about-hero{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:clamp(28px,6vw,86px);padding:72px clamp(26px,8vw,120px);min-height:570px;background-image:linear-gradient(90deg,rgba(2,14,9,.85),rgba(5,25,17,.68)),url("https://images.unsplash.com/photo-1762755126280-6d8a4f9d1115?auto=format&fit=crop&w=1800&q=82");background-size:cover;background-position:center}
+.about-photo{height:440px;max-width:340px;width:100%;justify-self:center;position:relative;overflow:hidden;border:1px solid rgba(229,203,140,.85);border-radius:170px 170px 22px 22px;padding:7px;background:linear-gradient(145deg,#e2c47e,#806032,#e1c47e);box-shadow:0 20px 48px #0008}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%;border-radius:160px 160px 15px 15px;filter:none!important;mix-blend-mode:normal!important}
+.about-photo span{position:absolute;left:18px;bottom:22px;color:#f1dca7;font-size:7px;letter-spacing:.15em;text-shadow:0 2px 8px #000}
+.about-copy{max-width:650px}
+.about-copy h1{font-size:clamp(44px,5.3vw,68px);line-height:1;margin:0 0 22px}
+.about-copy p:not(.eyebrow){font-size:11px;line-height:2;color:#d2ddce;max-width:580px}
+.about-copy .hero-actions{margin-top:26px}
+.about-principles{background:linear-gradient(180deg,#071b12,#0c2c20)}
+.account-hero{background-image:linear-gradient(90deg,rgba(2,13,8,.9),rgba(3,20,13,.62)),url("https://images.unsplash.com/photo-1728241189719-ea4327c16eee?auto=format&fit=crop&w=1600&q=80") !important}
+.booking-hero{background-image:linear-gradient(90deg,rgba(2,13,8,.9),rgba(3,20,13,.62)),url("https://images.unsplash.com/photo-1694144167581-8bc49479f6b7?auto=format&fit=crop&w=1600&q=80") !important}
+@media(max-width:850px){
+ .hero-temnolese{grid-template-columns:1fr;min-height:0;padding:54px 25px 60px;gap:22px}
+ .hero-temnolese .hero-copy{max-width:720px}
+ .hero-temnolese h1{font-size:clamp(48px,9vw,68px)}
+ .hero-portrait-large{height:380px;width:min(75%,300px)}
+ .temno-feature-grid,.about-hero{grid-template-columns:1fr}
+ .about-photo{height:390px;width:290px;max-width:90%}
+ .about-copy{max-width:760px}
+ .tarot-layout{grid-template-columns:1fr}
+ .tarot-photo,.tarot-photo img{min-height:280px;height:300px}
+ .candle-layout-photo{grid-template-columns:1fr}
+ .candle-real-photo,.candle-real-photo img{min-height:300px;height:300px}
+ .service-tiles{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .hero-temnolese{padding:42px 20px 48px}
+ .hero-temnolese h1{font-size:clamp(42px,12vw,58px)}
+ .hero-portrait-large{height:330px;width:min(78%,270px)}
+ .temno-photo-grid{grid-template-columns:1fr;grid-template-rows:250px 220px 220px}
+ .temno-photo-card:first-child{grid-row:auto}
+ .temno-feature-photo{height:270px}
+ .temno-feature-grid{gap:24px}
+ .about-hero{padding:44px 20px 50px;gap:26px}
+ .about-photo{height:335px;width:255px}
+ .about-copy h1{font-size:45px}
+ .service-tiles{grid-template-columns:1fr}
+ .discount-wide{align-items:flex-start;gap:14px;padding:20px}
+ .discount-wide strong{font-size:40px}
+ .ritual-photo-banner{height:180px}
+ .tarot-price-card{padding:23px}
+ .candle-real-photo,.candle-real-photo img{height:270px;min-height:270px}
+ .photo-credit{font-size:6px!important}
+}
