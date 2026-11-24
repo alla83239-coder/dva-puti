@@ -107,7 +107,9 @@
    $$("[data-prev]").forEach(button=>button.addEventListener("click",()=>showStep(Math.max(1,step-1))));
    form.addEventListener("submit",event=>{
      event.preventDefault();
-     if(!form.reportValidity())return;
+     for(const field of $('.booking-step.active [required]')) if(!field.reportValidity())return;
+     const emailField=$('#bookingEmail');
+     if(emailField&&emailField.value&&!emailField.reportValidity())return;
      const service=SERVICES.find(row=>row.id===select.value);
      if(!service)return;
      if(date&&date.value&&date.value<localDate()){showStep(2);date.setCustomValidity("Выберите сегодняшнюю или будущую дату.");date.reportValidity();return;}
